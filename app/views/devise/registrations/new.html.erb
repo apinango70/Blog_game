@@ -27,3 +27,60 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+
+<hr>
+    <section class="page-section login-page">
+        <div class="full-width-screen">
+            <div class="container-fluid">
+                <div class="content-detail">
+                    <div class="main-info">
+                        <div class="hero-container">
+                            <!-- Signup form -->
+							<form class="signup-form" method="post">
+							    <div class="imgcontainer">
+									<%= image_tag "logo.png", alt: 'logo', class:'avatar' %>
+								</div>
+							    <div class="input-control">
+							    	<div class="row p-l-5 p-r-5">
+									    <div class="col-md-6 p-l-10 p-r-10">
+											<input type="text" placeholder="Enter Username" name="uname" required>
+										</div>
+										<div class="col-md-6 p-l-10 p-r-10">
+											<input type="email" placeholder="Enter Email" name="email" required>
+										</div>
+										<div class="col-md-6 p-l-10 p-r-10">
+											<input type="password" placeholder="Enter Password" name="psw" class="input-checkmark" required>
+										</div>
+										<div class="col-md-6 p-l-10 p-r-10">
+											<span class="password-field-show">
+												<input class="password-field input-checkmark" type="password" placeholder="Re-enter Password" name="psw" required>
+												<span data-toggle=".password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+											</span>
+										</div>
+									</div>
+									<label class="label-container">I agree with <a href="#"> privacy policy</a>
+										<input type="checkbox">
+										<span class="checkmark"></span>
+									</label>
+							        <div class="login-btns">
+							      		<button type="submit">Sign up</button>
+									</div>
+							      	<div class="division-lines"><p>or signup with</p></div>
+							      	<div class="login-with-btns">
+							      		<button type="button" class="google"><i class="fab fa-google"></i></button>
+							      		<button type="button" class="facebook"><i class="fab fa-facebook-f"></i></button>
+							      		<button type="button" class="twitter"><i class="fab fa-twitter"></i></button>
+							      		<button type="button" class="linkedin"><i class="fab fa-linkedin-in"></i></button>
+                        <span class="already-acc">Already you have an account?
+                        <%= link_to "Log in", new_session_path(resource_name) %>
+                        </span>
+									</div>
+								</div>
+							</form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

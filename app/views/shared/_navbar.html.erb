@@ -17,12 +17,8 @@
       <form class="d-flex" >
 
 
-
-
-
-
         <% if user_signed_in? %>
-<%= button_to 'Cerrar sesión', destroy_user_session_path, class: 'btn btn-outline-success', method: :delete %></li>
+          <%= button_to 'Cerrar sesión', destroy_user_session_path, class: 'btn btn-outline-success', method: :delete %></li>
           <%= button_to 'Cerrar sesión', destroy_user_session_path, class: 'btn btn-outline-success', method: :delete %></li>
         <% else %>
         <%= link_to 'Iniciar sesión', new_user_session_path, class: 'btn btn-outline-success'%>

@@ -14,3 +14,35 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+<hr>
+
+   <section class="page-section login-page">
+        <div class="full-width-screen">
+            <div class="container-fluid">
+                <div class="content-detail">
+                    <div class="main-info">
+                        <div class="hero-container">
+                            <!-- Forgot form -->
+							<form class="forgot-form" method="post">
+								<div class="imgcontainer">
+									<%= image_tag "logo.png", alt: 'logo', class:'avatar' %>
+								</div>
+								<div class="input-control">
+									<p>Enter your email, we will send a link to reset your password.</p>
+									<input type="email" placeholder="Enter your email" name="email" required>
+									<div class="login-btns">
+										<button type="submit">Reset</button>
+									</div>
+									<div class="login-with-btns">
+                                        <span class="already-acc">Return to
+                                        <%= link_to "Log in", new_session_path(resource_name) %>
+                                        </span>
+									</div>
+								</div>
+							</form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
