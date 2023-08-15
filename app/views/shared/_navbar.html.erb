@@ -14,10 +14,25 @@
         </li>
 
       </ul>
-      <form class="d-flex" role="search">
-        <!--<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
-        <button class="btn btn-outline-success" type="submit">prueba</button>
+      <form class="d-flex" >
+
+
+
+
+
+
+        <% if user_signed_in? %>
+<%= button_to 'Cerrar sesión', destroy_user_session_path, class: 'btn btn-outline-success', method: :delete %></li>
+          <%= button_to 'Cerrar sesión', destroy_user_session_path, class: 'btn btn-outline-success', method: :delete %></li>
+        <% else %>
+        <%= link_to 'Iniciar sesión', new_user_session_path, class: 'btn btn-outline-success'%>
+
+        <%= link_to 'Registro', new_user_registration_path, class: 'btn btn-outline-success'%>
+        <% end %>
       </form>
     </div>
   </div>
 </nav>
+
+
+
